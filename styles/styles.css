@@ -1,6 +1,6 @@
-div, header{
+/*div, header{
   border: 1px solid blue;
-}
+}*/
 
 header{
   display:float;
@@ -44,7 +44,7 @@ div span a {
 
 .homePic {
   width: 55%;
-  height: 55%;
+  height: 60%;
   float: right;
   margin-right: 3%;
   clear: both;
@@ -86,7 +86,7 @@ a: hover {
 }
 
 .parallax-container {
-  min-height: 180px;
+  min-height: 280px;
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
@@ -161,12 +161,14 @@ a: hover {
 }
 
 .pricingBox {
-  width: 60%;
+  width: 65%;
   margin: 5% auto;
 }
 
 .title {
-  font-size: 20px;
+  font-size: 24px;
+  font-family: 'Tinos', serif;
+  color: #105F79;
 }
 
 .priceTime span {
@@ -176,10 +178,102 @@ a: hover {
 .description {
   width: 60%;
   display: inline-block;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  margin-top: 10px;
 }
 
 .priceTime {
   display: inline-block;
-  width: 30%;
+  width: 35%;
   padding-left: 20%;
+  font-size: 16px;
 }
+
+/* ---------------- CONTACT ------------------ */
+
+.contactWrapper {
+  margin-top: 40px;
+}
+
+.contactImg {
+  width: 100%;
+}
+
+.contactMain {
+  overflow: hidden;
+}
+
+.icons {
+  font-size: 28px;
+  float: left;
+  margin-top: 10%;
+  margin-left: 20%;
+}
+
+.angular-google-map-container {
+  height: 350px;
+  width: 400px;
+  float: left;
+  margin-left: 40%;
+  margin-top: 5%;
+}
+
+/* ----------------- MEDIA ---------------- */
+
+.photoWrap {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.photoGrid {
+  width: 30%;
+  border: 5px solid transparent;
+
+}
+
+.photoInGrid {
+  width: 100%;
+  height: 100%;
+}
+
+.loadingBar {
+  width: 80%;
+}
+
+/*.dynamic-grid {
+    position: relative;
+    display: none;
+}
+
+.dynamic-grid.angular-grid {
+    display: block;
+}
+
+.grid {
+    border: 1px solid #cccccc;
+    position: absolute;
+    list-style: none;
+    background: #ffffff;
+    box-sizing: border-box;
+    -moz-box-sizing : border-box;
+    -webkit-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+}
+.grid-img {
+    width: 100%;
+    vertical-align: middle;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.grid-img.img-loaded {
+    visibility: visible;
+    opacity: 1;
+}*/

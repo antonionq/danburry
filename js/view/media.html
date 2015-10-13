@@ -1,0 +1,22 @@
+<div class="linkWrap2">
+  <div>
+    <span><a ng-href="#/home">Home</a></span>
+    <span><a ng-href="#/about">About</a></span>
+    <span><a ng-href="#/home">Appointments</a></span>
+    <span><a ng-href="#/prices">Prices</a></span>
+    <span><a ng-href="#/contact">Contact</a></span>
+    <span><a ng-href="#/media">Media</a></span>
+  </div>
+</div>
+
+<div class="photoWrap">
+  <div class="loadingBar">
+    <md-progress-linear ng-if="isSearching" md-mode="indeterminate"></md-progress-linear>
+  </div>
+  <div class="photoGrid" ng-repeat="picture in results track by $index">
+        <md-progress-linear ng-if="isSearching" md-mode="indeterminate"></md-progress-linear>
+        <img class="photoInGrid" ng-src="https://farm{{picture.farm}}.staticflickr.com/{{picture.server}}/{{picture.id}}_{{picture.secret}}_b.jpg" alt="" />
+  </div>
+</div>
+<!-- https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=e8c1cde8c2a105921177cec181b9f7db&user_id=136173999@N07&format=json&jsoncallback=1
+https://farm1.staticflickr.com/593/22112395205_2ff7745631_b.jpg -->
