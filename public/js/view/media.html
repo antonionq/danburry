@@ -1,0 +1,36 @@
+<div class="linkWrap2">
+  <div>
+    <span><a ng-href="#/home">Home</a></span>
+    <span><a ng-href="#/about">About</a></span>
+    <span><a ng-href="#/appointment">Appointments</a></span>
+    <span><a ng-href="#/prices">Prices</a></span>
+    <span><a ng-href="#/contact">Contact</a></span>
+    <span><a ng-href="#/media">Media</a></span>
+  </div>
+</div>
+
+<div class="photoWrap">
+  <div class="loadingBar">
+    <!-- <md-progress-linear ng-if="isSearching" md-mode="indeterminate"></md-progress-linear> -->
+    <div ng-if="isSearching" class="progress">
+      <div class="indeterminate grey darken-3"></div>
+    </div>
+  </div>
+  <div class="photoGrid" ng-repeat="picture in results track by $index">
+        <img class="photoInGrid animated fadeIn" ng-src="https://farm{{picture.farm}}.staticflickr.com/{{picture.server}}/{{picture.id}}_{{picture.secret}}_b.jpg" alt="" />
+  </div>
+
+  <div ng-if="isSearching2" class="progress">
+    <div class="indeterminate grey darken-3"></div>
+  </div>
+  <div class="photoGrid" id="images-test" ng-show="newImages" ng-repeat="picture in results2 track by $index">
+        <img class="photoInGrid animated fadeIn" ng-src="https://farm{{picture.farm}}.staticflickr.com/{{picture.server}}/{{picture.id}}_{{picture.secret}}_b.jpg" alt="" />
+  </div>
+
+  <div ng-if="isSearching3" class="progress">
+    <div class="indeterminate grey darken-3"></div>
+  </div>
+  <div class="photoGrid" ng-show="newImages2" ng-repeat="picture in results3 track by $index">
+        <img class="photoInGrid animated fadeIn" ng-src="https://farm{{picture.farm}}.staticflickr.com/{{picture.server}}/{{picture.id}}_{{picture.secret}}_b.jpg" alt="" />
+  </div>
+</div>

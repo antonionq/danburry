@@ -1,0 +1,344 @@
+/*div, header{
+  border: 1px solid blue;
+}*/
+
+header{
+  display:float;
+  margin-top: 5%;
+  margin-left: 5%;
+}
+
+
+.logo {
+  float: left;
+  width: 15%;
+  height: 15%;
+}
+
+.logo > img {
+  width: 100%;
+}
+
+.linkWrap {
+  float: left;
+  width: 60%;
+  margin-left: 20%;
+}
+
+div span a {
+  text-decoration: none;
+  color: #191919;
+  font-size: 17px;
+  margin-left: 5%;
+  font-family: 'Cinzel', serif;
+}
+
+.location {
+  float: left;
+  font-family: 'Lato', sans-serif;
+  margin-left: 7%;
+  margin-top: 2%;
+  font-size: 14px;
+}
+
+.homePic {
+  width: 55%;
+  height: 60%;
+  float: right;
+  margin-right: 3%;
+  clear: both;
+  margin-bottom: 10px;
+  margin-top: -8%;
+}
+
+.homePic > img {
+  width: 100%;
+  height: 100%;
+  clear: both;
+}
+
+.rowCenter {
+  padding-top: 60px;
+}
+
+.hrLine {
+  clear: both;
+}
+
+footer {
+  clear: both;
+  text-align: center;
+}
+
+a: hover {
+  color: #052c68;
+}
+
+#hoursOfOp {
+  padding-top: 20%;
+}
+
+.iconsHome {
+  margin-top: 20%;
+  height: 30px;
+  width: 30px;
+  margin-right: 10%;
+}
+
+.iconsHome:hover {
+  opacity: 0.5;
+}
+
+/*----------------ABOUT---------------*/
+
+.linkWrap2 > div {
+  margin-top: 5%;
+  text-align: center;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aboutWrapper {
+  height: 100vh;
+  width: 100%;
+}
+
+.parallax-container {
+  min-height: 280px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+
+.profiles {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+  margin-top: 150px;
+}
+
+.aboutImg {
+  width: 100%;
+}
+
+.danProfile {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 500px;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.jamesProfile {
+  width: 300px;
+  height: 300px;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.names {
+  font-size: 26px;
+  font-family: 'Raleway', sans-serif;
+  color: #105F79;
+}
+
+.danProfile > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 70%;
+}
+
+.jamesProfile > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 70%;
+}
+
+#danAbout {
+  padding-top: 1%;
+}
+
+#jamesAbout {
+  padding-top: 5%;
+}
+
+@media (min-width: 400px) {
+  .profiles {
+    flex-flow: row wrap;
+  }
+}
+
+/* --------------- APPOINTMENTS ---------------- */
+
+.infoWrap {
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 5%;
+}
+
+.barberSelect {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.calendarBox {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#calendar {
+  /*width: 100%;*/
+}
+
+.pricingOption {
+  text-align: right;
+  padding-left: 50px;
+}
+
+#phoneNum {
+  width: 100%;
+}
+
+/* -------------- PRICES --------------*/
+
+.pricingWrapper {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.pricingBox {
+  width: 65%;
+  margin: 5% auto;
+}
+
+.title {
+  font-size: 24px;
+  font-family: 'Tinos', serif;
+  color: #105F79;
+}
+
+.priceTime span {
+  display: block;
+}
+
+.description {
+  width: 60%;
+  display: inline-block;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.topTwo {
+  padding-top: 25px;
+}
+
+.priceTime {
+  display: inline-block;
+  width: 30%;
+  padding-left: 15%;
+  font-size: 19px;
+  font-family: 'Tinos', serif;
+  color: #2b2a2a;
+}
+
+/* ---------------- CONTACT ------------------ */
+
+.contactWrapper {
+  margin-top: 40px;
+}
+
+.contactImg {
+  /*width: 100%;*/
+}
+
+.contactMain {
+  overflow: hidden;
+}
+
+.icons {
+  width: 40%;
+  font-size: 34px;
+  float: left;
+  margin-top: 10%;
+  margin-left: 10%;
+}
+
+.icons i {
+  margin-right: 10px;
+}
+
+.mediaLink {
+  padding-right: 20%;
+  font-size: 22px;
+}
+
+.angular-google-map-container {
+  height: 350px;
+  width: 400px;
+  float: right;
+  margin-right: 10%;
+  margin-top: 5%;
+}
+
+.icons a {
+  color: black;
+}
+
+/* ----------------- MEDIA ---------------- */
+
+.photoWrap {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.photoGrid {
+  width: 30%;
+  border: 5px solid transparent;
+
+}
+
+.photoInGrid {
+  width: 100%;
+  height: 100%;
+}
+
+.loadingBar {
+  width: 80%;
+}
+
+.progress {
+  height: 5px !important;
+}
+
+/*------------------- ADMIN -----------------*/
+
+.adminWrap {
+  width: 17%;
+  margin: 0 auto;
+  padding-top: 20%;
+}
+
+/*------------------ ADMIN APPT ---------------- */
+
+.adminApptWrap {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.apptContent {
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+
+.deleteButton {
+  margin-bottom: 20px;
+}

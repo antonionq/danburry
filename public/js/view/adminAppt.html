@@ -1,0 +1,36 @@
+<div class="adminApptWrap">
+  <div class="apptContent">
+    <h1>Appointments</h1>
+    <!-- <div class="appointmentWrap" ng-repeat="appointment in apptView">
+      <ul>
+        <li>{{appointment.haircutType}}</li>
+        <li>{{appointment.barber}}</li>
+        <li>{{appointment.apptDate}}</li>
+        <li>{{appointment.firstName}}</li>
+        <li>{{appointment.lastName}}</li>
+        <li>{{appointment.phoneNum}}</li>
+        <li>{{appointment.email}}</li>
+      </ul>
+    </div> -->
+    <ul class="collapsible" data-collapsible="expandable" watch>
+        <li ng-repeat="appointment in apptView">
+          <div class="collapsible-header"><i class="{{appointment.icon}}"></i>{{appointment.firstName}} {{appointment.lastName}}</div>
+            <div class="collapsible-body">
+              <p>
+                <ul>
+                  <li>{{appointment.haircutType}}</li>
+                  <li>{{appointment.barber}}</li>
+                  <li>{{appointment.apptDate}}</li>
+                  <li>{{appointment.phoneNum}}</li>
+                  <li>{{appointment.email}}</li>
+                </ul>
+              </p>
+              <button class="btn waves-effect waves-light red darken-1 deleteButton" type="submit" name="action" ng-click="deleteIt(appointment._id)">Delete
+                <i class="material-icons right"></i>
+              </button>
+            </div>
+        </li>
+    </ul>
+
+  </div>
+</div>
