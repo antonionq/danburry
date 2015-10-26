@@ -1,17 +1,10 @@
 <div class="adminApptWrap">
   <div class="apptContent">
+
+    <a href="/logout" class="waves-effect waves-light grey darken-4 btn topButton">Logout</a>
+    <a href="#/home" class="waves-effect waves-light grey darken-4 btn topButton">Home</a>
+
     <h1>Appointments</h1>
-    <!-- <div class="appointmentWrap" ng-repeat="appointment in apptView">
-      <ul>
-        <li>{{appointment.haircutType}}</li>
-        <li>{{appointment.barber}}</li>
-        <li>{{appointment.apptDate}}</li>
-        <li>{{appointment.firstName}}</li>
-        <li>{{appointment.lastName}}</li>
-        <li>{{appointment.phoneNum}}</li>
-        <li>{{appointment.email}}</li>
-      </ul>
-    </div> -->
     <ul class="collapsible" data-collapsible="expandable" watch>
         <li ng-repeat="appointment in apptView">
           <div class="collapsible-header"><i class="{{appointment.icon}}"></i>{{appointment.firstName}} {{appointment.lastName}}</div>
@@ -33,4 +26,25 @@
     </ul>
 
   </div>
+</div>
+
+<div class="editWrapper">
+  <h2>Make Changes</h2>
+  <h4>Days Open</h4>
+  <input class="inputInfo" type="text" name="name" value={{hoursAndTime2[0].firstDay}} ng-model='hoursAndTime2[0].firstDay'>
+  <span>to</span>
+  <input class="inputInfo" type="text" name="name" value={{hoursAndTime2[0].lastDay}} ng-model='hoursAndTime2[0].lastDay'>
+  <h4>Time</h4>
+  <input class="inputInfo" type="text" name="name" value={{hoursAndTime2[0].openTime}} ng-model='hoursAndTime2[0].openTime'>
+  <span>to</span>
+  <input class="inputInfo" type="text" name="name" value={{hoursAndTime2[0].closeTime}} ng-model='hoursAndTime2[0].closeTime'>
+  <h4>Haircut Pricing</h4>
+  Basic Haircut<input class="haircutPrice" type="text" name="name" value={{hoursAndTime2[0].haircut1}} ng-model='hoursAndTime2[0].haircut1'>
+  Gentleman's Haircut<input class="haircutPrice" type="text" name="name" value={{hoursAndTime2[0].haircut2}} ng-model='hoursAndTime2[0].haircut2'>
+  Face Shave<input class="haircutPrice" type="text" name="name" value={{hoursAndTime2[0].haircut3}} ng-model='hoursAndTime2[0].haircut3'>
+  Head Shave<input class="haircutPrice" type="text" name="name" value={{hoursAndTime2[0].haircut4}} ng-model='hoursAndTime2[0].haircut4'>
+  Beard Trim<input class="haircutPrice" type="text" name="name" value={{hoursAndTime2[0].haircut5}} ng-model='hoursAndTime2[0].haircut5'>
+  <button class="btn waves-effect waves-light blue deleteButton" type="submit" name="action" ng-click="updateInfo(hoursAndTime2[0])">Update
+    <i class="material-icons right"></i>
+  </button>
 </div>

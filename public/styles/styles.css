@@ -2,6 +2,21 @@
   border: 1px solid blue;
 }*/
 
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
 header{
   display:float;
   margin-top: 5%;
@@ -19,10 +34,56 @@ header{
   width: 100%;
 }
 
+@media (max-width: 700px) {
+  .logo {
+    float: none;
+    width: 40%;
+    height: 40%;
+    margin: 0 auto;
+    margin-bottom: 10%;
+  }
+
+  header {
+    margin-left: 0;
+  }
+
+  .linkWrap {
+    display: block;
+    margin-bottom: 10%;
+    margin-left: 20% !important;
+  }
+
+  .linkWrap span {
+    display: block;
+    text-align: center;
+  }
+
+  .linkWrap2 span {
+    display: block;
+    text-align: center;
+  }
+
+  .homePic {
+    float: none !important;
+    width: 100% !important;
+  }
+
+  .location {
+    margin: 0 auto;
+    margin-left: auto !important;
+    text-align: center;
+    width: 100%;
+  }
+
+  #hoursOfOp {
+    padding-top: 10% !important;
+  }
+}
+
 .linkWrap {
   float: left;
   width: 60%;
-  margin-left: 20%;
+  margin-left: 25%;
 }
 
 div span a {
@@ -159,7 +220,7 @@ a: hover {
 }
 
 #danAbout {
-  padding-top: 1%;
+  padding-top: 5%;
 }
 
 #jamesAbout {
@@ -170,6 +231,10 @@ a: hover {
   .profiles {
     flex-flow: row wrap;
   }
+}
+
+.aboutWrap {
+  margin-bottom: 100px;
 }
 
 /* --------------- APPOINTMENTS ---------------- */
@@ -246,47 +311,127 @@ a: hover {
   color: #2b2a2a;
 }
 
+@media (max-width: 760px) {
+  .pricingWrapper {
+    width: 100%;
+  }
+}
+
 /* ---------------- CONTACT ------------------ */
 
+.mainWrap {
+  height: 100%;
+}
+
 .contactWrapper {
-  margin-top: 40px;
+  padding-top: 2%;
+  height: 80%;
 }
 
-.contactImg {
-  /*width: 100%;*/
+.firstBlock {
+  width: 100%;
+  height: 20vh;
+  background-color: #EAEAEC;
 }
 
-.contactMain {
-  overflow: hidden;
+.contactBlock {
+  /*height: 250px;*/
+  width: 100%;
+  /*height: 64vh;*/
+  /*background-color: #14353d;*/
+  background-color: #1B1B1F;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  padding-bottom: 6%;
 }
 
-.icons {
-  width: 40%;
-  font-size: 34px;
-  float: left;
-  margin-top: 10%;
-  margin-left: 10%;
+.infoIconWrap {
+  width: 50%;
+  margin-left: 6%;
+  height: 100%;
 }
 
-.icons i {
-  margin-right: 10px;
+.googleMaps {
+  /*width: 50%;*/
+  margin-top: 8%;
+  margin-left: 5%;
 }
 
-.mediaLink {
-  padding-right: 20%;
-  font-size: 22px;
+.contactInfo {
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  padding-top: 20%;
+}
+
+.fa {
+  width: 55px;
+  height: 55px;
+  margin: 20px !important;
+}
+
+.iconsWrap {
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+}
+
+.iconsWrap ul li {
+  display: inline-block;
+  text-align: center;
+}
+
+.fa {
+  margin: 0;
+  padding: .10em .14em .10em .14em;
+  padding-top: 1em;
+}
+
+.fa-facebook {
+  margin: 0;
+  /*padding: .10em .14em .10em .14em;*/
+}
+
+a i{
+  /*color: #105F79;*/
+  color: #bbb;
+  padding-right: 20px;
+  /*border-style: solid;
+  border-width: .03em;*/
+}
+
+i:hover {
+  color: white;
+}
+
+.fa {
+  border: 1px solid white;
 }
 
 .angular-google-map-container {
   height: 350px;
   width: 400px;
-  float: right;
-  margin-right: 10%;
-  margin-top: 5%;
 }
 
-.icons a {
-  color: black;
+#shopName {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 650px) {
+  .contactBlock {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .infoIconWrap {
+    margin: 0 auto;
+  }
+
+  .googleMaps {
+    margin-left: 0;
+  }
 }
 
 /* ----------------- MEDIA ---------------- */
@@ -318,6 +463,18 @@ a: hover {
   height: 5px !important;
 }
 
+@media (max-width: 1200px) {
+  .photoGrid {
+    width: 45%;
+  }
+}
+
+@media (max-width: 650px) {
+  .photoGrid {
+    width: 80%;
+  }
+}
+
 /*------------------- ADMIN -----------------*/
 
 .adminWrap {
@@ -341,4 +498,25 @@ a: hover {
 
 .deleteButton {
   margin-bottom: 20px;
+}
+
+
+.editWrapper {
+  margin: 0 auto;
+  width: 40%;
+  padding-top: 100px;
+}
+
+.inputInfo {
+  display: inline-block;
+  width: 30% !important;
+  text-align: center;
+}
+
+.haircutPrice {
+  width: 40%;
+}
+
+.topButton {
+  margin-top: 30px;
 }

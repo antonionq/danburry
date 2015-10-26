@@ -14,6 +14,17 @@ app.controller('appt', function ($scope, apptService) {
         {value: 'haircut5', displayName: 'Beard Trim'}
      ]
 
+    // $scope.timeSlots = [
+    //     {value: 'first', displayName: '10:00'},
+    //     {value: 'second', displayName: '11:00'},
+    //     {value: 'third', displayName: '12:00'},
+    //     {value: 'fourth', displayName: '1:00'},
+    //     {value: 'fifth', displayName: '2:00'},
+    //     {value: 'sixth', displayName: '3:00'},
+    //     {value: 'seventh', displayName: '4:00'},
+    //     {value: 'eighth', displayName: '5:00'}
+    //  ]
+
   //Barber
     $scope.barbers = [
         {value: 'danB', displayName: 'Dan'},
@@ -72,7 +83,7 @@ app.controller('appt', function ($scope, apptService) {
       // console.log($scope.phoneSelect)
       // console.log($scope.emailSelect)
 
-      $scope.currentTime.toLocaleDateString('en-US')
+      currentTime.toLocaleDateString('en-US')
 
       var data = {
         "haircutType": $scope.haircutType,

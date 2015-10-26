@@ -1,6 +1,6 @@
 var app = angular.module('dburry');
 
-app.controller('homeCtrl', function($scope, $log, $timeout){
+app.controller('homeCtrl', function($scope, $log, $timeout, adminMaintain){
   $scope.map = { center: { latitude: 40.234508, longitude: -111.659036 }, zoom: 18 };
   $scope.options = {scrollwheel: false};
     $scope.coordsUpdates = 0;
@@ -29,7 +29,19 @@ app.controller('homeCtrl', function($scope, $log, $timeout){
         }
       }
     };
+
+      $scope.hoursAndTime = {};
+
+      adminMaintain.getHoursAndTime().then(function(res) {
+        $scope.hoursAndTime = res.data;
+      })
+
 });
+
+
+
+
+
 
 app.controller('flickr', function ($scope, $http) {
   $scope.results = [];

@@ -25,11 +25,29 @@ app.config(function ($routeProvider){
     controller: 'flickr'
   })
   .when('/admin', {
-    templateUrl: 'js/view/admin.html'
+    templateUrl: 'js/view/admin.html',
+    controller: 'loginCtrl'
   })
   .when('/admin/appointments', {
     templateUrl: 'js/view/adminAppt.html',
-    controller: 'adminAppt'
-  })
+    controller: 'adminAppt',
+    resolve: {
+      getUser: function(adminLoginSrvc, $location) {
+        return adminLoginSrvc.getUsername().then(function(res) {
+          console.log('res: ', res);
+          return res;
+        }, function(err){
+          console.log('err: ', err);
+          return $location.path('/home');
+        })
+      }
+            // if(res.error && res.admin!==true) {
+            //   $location.path('/')
+            // }
+            // }, function(err) {
+            //     console.error(err);
+            //   }
+        }
+      })
   .otherwise('/home')
 })

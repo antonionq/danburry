@@ -1,5 +1,5 @@
 <header>
-  <div class="logo"><img src='styles/danburryLogo.png'></img></div>
+  <div class="logo"><img class="animated fadeIn" src='styles/danburryLogo.png'></img></div>
   <div class="linkWrap">
     <div>
       <span><a href="#/home">Home</a></span>
@@ -12,15 +12,15 @@
   </div>
 </header>
     <div class="homePic">
-      <img src='styles/suit.jpg'></img>
+      <img class="animated fadeIn" src='styles/suit.jpg'></img>
     </div>
     <div class="location">
       <p>Danburry Barber Shop</p>
       <p>55 North University Avenue #145</p>
       <p>Provo, Utah 84601</p>
 
-      <p id="hoursOfOp">Open Tue - Sat</p>
-      <p>10-6pm</p>
+      <p id="hoursOfOp">Open {{hoursAndTime[0].firstDay}} - {{hoursAndTime[0].lastDay}}</p>
+      <p>{{hoursAndTime[0].openTime}}-{{hoursAndTime[0].closeTime}}pm</p>
 
       <span><a href="https://www.facebook.com/danburrybarbershop"><img class="iconsHome" src="styles/fb.png"></img></a></span>
       <span><a href="https://twitter.com/DanburryBarber"><img class="iconsHome" src="styles/twit.png"></img></a></span>
