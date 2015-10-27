@@ -20,16 +20,16 @@
         <img class="photoInGrid animated fadeIn" ng-src="https://farm{{picture.farm}}.staticflickr.com/{{picture.server}}/{{picture.id}}_{{picture.secret}}_b.jpg" alt="" />
   </div>
 
-  <div ng-if="isSearching2" class="progress">
+  <!-- <div ng-if="isSearching2" class="progress">
     <div class="indeterminate grey darken-3"></div>
-  </div>
+  </div> -->
   <div class="photoGrid" id="images-test" ng-show="newImages" ng-repeat="picture in results2 track by $index">
         <img class="photoInGrid animated fadeIn" ng-src="https://farm{{picture.farm}}.staticflickr.com/{{picture.server}}/{{picture.id}}_{{picture.secret}}_b.jpg" alt="" />
   </div>
 
-  <div ng-if="isSearching3" class="progress">
+  <!-- <div ng-if="isSearching3" class="progress">
     <div class="indeterminate grey darken-3"></div>
-  </div>
+  </div> -->
   <div class="photoGrid" ng-show="newImages2" ng-repeat="picture in results3 track by $index">
         <img class="photoInGrid animated fadeIn" ng-src="https://farm{{picture.farm}}.staticflickr.com/{{picture.server}}/{{picture.id}}_{{picture.secret}}_b.jpg" alt="" />
   </div>

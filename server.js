@@ -8,11 +8,12 @@ var passport = require('passport');
 var passportCtrl = require('./server/services/passport')
 var flash = require('connect-flash')
 var LocalStrategy  = require('passport-local').Strategy;
-var UserCtrl = require('./server/controllers/UserCtrl');
+var request = require('request');
 
+var UserCtrl = require('./server/controllers/UserCtrl');
 var appointment = require('./server/controllers/appointment');
 var maintain = require('./server/controllers/maintain');
-
+var flickr = require('./server/controllers/flickrMediaCtrl');
 
 
 // EXPRESS //
@@ -47,14 +48,7 @@ app.post('/login', passport.authenticate('local'), function(req, res) {
 	}
   res.send(req.user)
 });
-// app.get('/auth', function(req, res) {
-//   res.json(req.user)
-// })
-// app.post('/login', function(req, res, next) {
-//   return next();
-// }, passport.authenticate('local'), function(req, res) {
-//   res.json(req.user);
-// })
+
 app.get('/logout', function(req, res) {
   req.logout();
   req.session.destroy(function (err) {
@@ -69,6 +63,10 @@ app.delete('/admin/appointments/:id', appointment.destroy);
 app.get('/admin/edit', maintain.read);
 app.post('/admin/edit', maintain.create);
 app.put('/admin/edit/:id', maintain.update);
+
+app.get('/media', flickr.getInfo);
+app.get('/mediaMore', flickr.getInfo2);
+app.get('/mediaEvenMore', flickr.getInfo3);
 
 var test = function(req, res, next) {
   console.log("HIT ME");
